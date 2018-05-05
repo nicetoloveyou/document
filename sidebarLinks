@@ -1,0 +1,43 @@
+import api from '@/api.js'
+
+const sidebarLinks = {}
+
+sidebarLinks.sidebar = [
+  {
+    name: '用户信息',
+    icon: 'ti-panel',
+    collapsed: false,
+    children: [
+      {
+        name: 'Overview',
+        path: '/admin/overview'
+      }
+    ]
+  },
+  {
+    name: '客服管理',
+    icon: 'ti-panel',
+    collapsed: false,
+    children: [
+      {
+        name: '用户管理',
+        path: '/customer/user_home'
+      }
+    ]
+  }
+]
+
+// 获取用户权限所有菜单
+
+sidebarLinks.getRemote = function (fn) {
+  let url = 'sysmanage/menu/user-menu'
+  api.post(url, (res) => {
+    console.log(res, 'sidebarLinKs')
+    for (let i in res) {
+      sidebarLinks.sidebar.push(res[i])
+    }
+    fn(sidebarLinks.sidebar)
+  })
+}
+
+export default sidebarLinks
