@@ -5,3 +5,9 @@ Select a.* From gold a
 inner join (Select userid, max(gold) as gold from gold group by userid order by id Desc) b
 On a.userid=b.userid and a.gold=b.gold 
 
+# 过去一天/小时/
+Select now() - interval 1 day
+
+# 日期函数
+
+https://blog.csdn.net/tanga842428/article/details/52788757
