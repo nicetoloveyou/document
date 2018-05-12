@@ -1,0 +1,14 @@
+
+
+D:\xampp\htdocs\develop\2018\yii2>yii gii/module --moduleClass=frontend\modules\cron --moduleID=cron
+
+
+yii gii/module --moduleClass=frontend\modules\cron\Module --moduleID=cron
+
+yii gii/module --moduleClass=frontend\modules\task\Module --moduleID=task
+
+yii gii/controller --controllerClass=backend\controllers\DoneController
+
+yii gii/module --moduleClass=backend\modules\systManage\Module --moduleID=systManage
+
+123456

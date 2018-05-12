@@ -1,0 +1,71 @@
+# hash set 
+hmset user userid "11111"  username "Paul"
+
+# hash get
+hget user userid
+
+# hash del
+
+hdel user userid
+
+# list
+
+ lpush nosql redis
+ 
+ lpupsh nosql mongodb
+
+# index
+ redis 127.0.0.1:6379[1]> lpush mylist "World"
+(integer) 1
+redis 127.0.0.1:6379[1]> lindex mylist 0
+
+
+#list get
+
+ lrange nosql
+
+
+# length
+redis 127.0.0.1:6379[1]> llen mylist
+
+------------------------------------------------------------------
+
+#set 集合
+
+redis 127.0.0.1:6379> sadd country china
+(integer) 1
+redis 127.0.0.1:6379> sadd country us
+(integer) 1
+redis 127.0.0.1:6379> smembers country
+1) "china"
+2) "us"
+redis 127.0.0.1:6379>
+
+#zadd 有序集合
+
+redis 127.0.0.1:6379> zadd love yangmi
+(error) ERR wrong number of arguments for 'zadd' command
+redis 127.0.0.1:6379> zadd love 0 yangmi
+(integer) 1
+redis 127.0.0.1:6379> zadd love 100 white
+(integer) 1
+redis 127.0.0.1:6379> zrangescore zadd 0 1000
+(error) ERR unknown command 'zrangescore'
+redis 127.0.0.1:6379> zrangebyscore love 0 1000
+1) "yangmi"
+2) "white"
+
+# move key
+
+redis 127.0.0.1:6379[1]> move hi 12
+(integer) 1
+redis 127.0.0.1:6379[1]> get hi
+
+# select database
+
+select 12
+
+# rename
+redis 127.0.0.1:6379[1]> rename what "whatNow"
+OK
+
