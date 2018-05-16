@@ -1,0 +1,20 @@
+本地新建仓库推送到远端：
+
+本地目录：console
+
+git init
+
+git add file
+
+git commit.
+
+git remote add origin git@github.com:nicetoloveyou/console.git
+
+git push origin local_branch 推送到某个分支
+
+
+如何解决failed to push some refs to git
+
+https://www.jianshu.com/p/835e0a48c825
+
+git pull --rebase origin master
