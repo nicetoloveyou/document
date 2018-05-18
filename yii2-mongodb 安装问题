@@ -1,0 +1,17 @@
+由于使用composer 安装 composer require yiisoft/yii2-mongodb 时候，composer 太慢慢了， 即便用配置了 国内镜像还是太慢，
+
+所以使用下载或者copy到 vendor目录下报 Class yii\mongodb\Connection does not exist 这个错误，
+
+后来找到 yiisoft/extensions.php 后 查看 需要加 yii2-mongodb的配置，
+
+结尾加上这一段就可以了：
+
+'yiisoft/yii2-mongodb' =>
+    array(
+        'name' => 'yiisoft/yii2-mongodb',
+        'version' => '2.0.6.0',
+        'alias' =>
+            array(
+                '@yii/mongodb' => $vendorDir . '/yiisoft/yii2-mongodb/src', //注意到这个src目录才行
+            ),
+    ),
