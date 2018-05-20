@@ -1,0 +1,31 @@
+2018-05-14T04:45:06.659+0800 W CONTROL  [main] 32-bit servers don't have journa
+ing enabled by default. Please use --journal if you want durability.
+2018-05-14T04:45:06.660+0800 I CONTROL  [main]
+2018-05-14T04:45:06.667+0800 I CONTROL  [main] Hotfix KB2731284 or later update
+is not installed, will zero-out data files
+2018-05-14T04:45:06.672+0800 I CONTROL  [initandlisten] MongoDB starting : pid=
+204 port=27017 dbpath=D:/Program Files/mongodb/data 32-bit host=SKY-20180209SVB
+2018-05-14T04:45:06.672+0800 I CONTROL  [initandlisten] targetMinOS: Windows Vi
+ta/Windows Server 2008
+2018-05-14T04:45:06.673+0800 I CONTROL  [initandlisten] db version v3.2.20
+2018-05-14T04:45:06.673+0800 I CONTROL  [initandlisten] git version: a7a144f40b
+0bfe290906eb33ff2714933544af8
+2018-05-14T04:45:06.673+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2018-05-14T04:45:06.673+0800 I CONTROL  [initandlisten] modules: none
+2018-05-14T04:45:06.673+0800 I CONTROL  [initandlisten] build environment:
+2018-05-14T04:45:06.673+0800 I CONTROL  [initandlisten]     distarch: i386
+2018-05-14T04:45:06.673+0800 I CONTROL  [initandlisten]     target_arch: i386
+2018-05-14T04:45:06.674+0800 I CONTROL  [initandlisten] options: { storage: { d
+Path: "D:/Program Files/mongodb/data" } }
+2018-05-14T04:45:06.675+0800 I STORAGE  [initandlisten] exception in initAndLis
+en: 28663 Cannot start server. The default storage engine 'wiredTiger' is not a
+ailable with this build of mongod. Please specify a different storage engine ex
+licitly, e.g. --storageEngine=mmapv1., terminating
+2018-05-14T04:45:06.675+0800 I CONTROL  [initandlisten] dbexit:  rc: 100
+
+
+
+mongod -dbpath="D:/Program Files/mongodb/data" --storageEngine=mmapv1
+
+mongod --logpath "D:/Program Files/mongodb/log/MongoDB6666.log"  --dbpath "D:/Program Files/mongodb/data" --install --serviceName "mongoDB" --journal
+

@@ -41,7 +41,7 @@ redis 127.0.0.1:6379> smembers country
 2) "us"
 redis 127.0.0.1:6379>
 
-# 并交差集
+# sunion交差集
 
 redis 127.0.0.1:6379> sismembers myset 5
 (error) ERR unknown command 'sismembers'
