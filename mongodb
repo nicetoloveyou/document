@@ -29,3 +29,13 @@ mongod --dbpath="D:/Program Files/mongodb/data" --storageEngine=mmapv1 --journal
 
 mongod --logpath "D:/Program Files/mongodb/log/MongoDB6666.log"  --dbpath "D:/Program Files/mongodb/data" --install --serviceName "mongoDB" --journal
 
+#nosql manager for mongodb
+
+# create new collection
+
+db.articles.insert({"title": "Hello World"})
+
+# create index on 
+db.articles.createIndex({"created_at": 1})
+db.articles.find({})
+db.articles.findOne()
