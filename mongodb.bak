@@ -41,16 +41,3 @@ db.articles.find({})
 db.articles.findOne()
 
 db.articles.find().pretty() 美化显示出来
-
-> cmdCount = 1;
-1
-> prompt = function () {}
-function () {}
-> prompt = function () {
-... return (cmdCount ++) + "> ";
-... }
-function () {
-return (cmdCount ++) + "> ";
-}
-
-注意： 写方法时候 换行，回出现 ... 在行的开头

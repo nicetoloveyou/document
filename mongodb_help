@@ -1,0 +1,95 @@
+28> db.collections.help()
+DBCollection help
+        db.collections.find().help() - show DBCursor help
+        db.collections.bulkWrite( operations, <optional params> ) - bulk execute
+ write operations, optional parameters are: w, wtimeout, j
+        db.collections.count( query = {}, <optional params> ) - count the number
+ of documents that matches the query, optional parameters are: limit, skip, hint
+, maxTimeMS
+        db.collections.copyTo(newColl) - duplicates collection by copying all do
+cuments to newColl; no indexes are copied.
+        db.collections.convertToCapped(maxBytes) - calls {convertToCapped:'colle
+ctions', size:maxBytes}} command
+        db.collections.createIndex(keypattern[,options])
+        db.collections.createIndexes([keypatterns], <options>)
+        db.collections.dataSize()
+        db.collections.deleteOne( filter, <optional params> ) - delete first mat
+ching document, optional parameters are: w, wtimeout, j
+        db.collections.deleteMany( filter, <optional params> ) - delete all matc
+hing documents, optional parameters are: w, wtimeout, j
+        db.collections.distinct( key, query, <optional params> ) - e.g. db.colle
+ctions.distinct( 'x' ), optional parameters are: maxTimeMS
+        db.collections.drop() drop the collection
+        db.collections.dropIndex(index) - e.g. db.collections.dropIndex( "indexN
+ame" ) or db.collections.dropIndex( { "indexKey" : 1 } )
+        db.collections.dropIndexes()
+        db.collections.ensureIndex(keypattern[,options]) - DEPRECATED, use creat
+eIndex() instead
+        db.collections.explain().help() - show explain help
+        db.collections.reIndex()
+        db.collections.find([query],[fields]) - query is an optional query filte
+r. fields is optional set of fields to return.
+                                                      e.g. db.collections.find(
+{x:77} , {name:1, x:1} )
+        db.collections.find(...).count()
+        db.collections.find(...).limit(n)
+        db.collections.find(...).skip(n)
+        db.collections.find(...).sort(...)
+        db.collections.findOne([query], [fields], [options], [readConcern])
+        db.collections.findOneAndDelete( filter, <optional params> ) - delete fi
+rst matching document, optional parameters are: projection, sort, maxTimeMS
+        db.collections.findOneAndReplace( filter, replacement, <optional params>
+ ) - replace first matching document, optional parameters are: projection, sort,
+ maxTimeMS, upsert, returnNewDocument
+        db.collections.findOneAndUpdate( filter, update, <optional params> ) - u
+pdate first matching document, optional parameters are: projection, sort, maxTim
+eMS, upsert, returnNewDocument
+        db.collections.getDB() get DB object associated with collection
+        db.collections.getPlanCache() get query plan cache associated with colle
+ction
+        db.collections.getIndexes()
+        db.collections.group( { key : ..., initial: ..., reduce : ...[, cond: ..
+.] } )
+        db.collections.insert(obj)
+        db.collections.insertOne( obj, <optional params> ) - insert a document,
+optional parameters are: w, wtimeout, j
+        db.collections.insertMany( [objects], <optional params> ) - insert multi
+ple documents, optional parameters are: w, wtimeout, j
+        db.collections.mapReduce( mapFunction , reduceFunction , <optional param
+s> )
+        db.collections.aggregate( [pipeline], <optional params> ) - performs an
+aggregation on a collection; returns a cursor
+        db.collections.remove(query)
+        db.collections.replaceOne( filter, replacement, <optional params> ) - re
+place the first matching document, optional parameters are: upsert, w, wtimeout,
+ j
+        db.collections.renameCollection( newName , <dropTarget> ) renames the co
+llection.
+        db.collections.runCommand( name , <options> ) runs a db command with the
+ given name where the first param is the collection name
+        db.collections.save(obj)
+        db.collections.stats({scale: N, indexDetails: true/false, indexDetailsKe
+y: <index key>, indexDetailsName: <index name>})
+        db.collections.storageSize() - includes free space allocated to this col
+lection
+        db.collections.totalIndexSize() - size in bytes of all the indexes
+        db.collections.totalSize() - storage allocated for all data and indexes
+        db.collections.update( query, object[, upsert_bool, multi_bool] ) - inst
+ead of two flags, you can pass an object with fields: upsert, multi
+        db.collections.updateOne( filter, update, <optional params> ) - update t
+he first matching document, optional parameters are: upsert, w, wtimeout, j
+        db.collections.updateMany( filter, update, <optional params> ) - update
+all matching documents, optional parameters are: upsert, w, wtimeout, j
+        db.collections.validate( <full> ) - SLOW
+        db.collections.getShardVersion() - only for use with sharding
+        db.collections.getShardDistribution() - prints statistics about data dis
+tribution in the cluster
+        db.collections.getSplitKeysForChunks( <maxChunkSize> ) - calculates spli
+t points over all chunks and returns splitter function
+        db.collections.getWriteConcern() - returns the write concern used for an
+y operations on this collection, inherited from server/db if set
+        db.collections.setWriteConcern( <write concern doc> ) - sets the write c
+oncern for writes to the collection
+        db.collections.unsetWriteConcern( <write concern doc> ) - unsets the wri
+te concern for writes to the collection
+29>
